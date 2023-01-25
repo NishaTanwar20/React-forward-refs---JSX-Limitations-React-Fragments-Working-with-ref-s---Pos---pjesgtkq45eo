@@ -1,13 +1,13 @@
-import React ,{useRef,useState,useEffect} from 'react';
 import '../styles/App.css';
 
-//complete the following using forward refs concept 
+import React, { forwardRef } from 'react';
 
-const InputField=()=>{
-    return(
+const InputField = forwardRef((props, ref) => {
+  return (
     <div>
-      <input id="input" type="text"  ref={ref}/>
+      <input id="input" ref={ref} />
     </div>
-    )
-    }
+  );
+});
+
 export default InputField;
